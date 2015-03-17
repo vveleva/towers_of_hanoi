@@ -1,0 +1,58 @@
+.main {
+  width: 300px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: block;
+}
+
+.main h1 {
+  font-size: 35px;
+}
+
+div.sq {
+  border: 1px solid white;
+  float: left;
+  background: #eee;
+  width: 80px;
+  height: 80px;
+  transform: rotate(180deg);
+}
+
+.sq:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.game-over {
+  display: block;
+  position: relative;
+  padding: 144px;
+  margin-left: 315px;
+  font-size: 25px;
+}
+
+#disk-0 {
+  background-color: red;
+  width: 30px;
+  height: 20px;
+  border-radius: 15px;
+  margin-left: 25px;
+}
+
+#disk-1 {
+  background-color: steelblue;
+  width: 50px;
+  height: 20px;
+  margin: 5px;
+  margin-left: 15px;
+  border-radius: 15px;
+}
+
+#disk-2 {
+  background-color: lightsteelblue;
+  width: 80px;
+  height: 20px;
+  border-radius: 15px;
+
+}
