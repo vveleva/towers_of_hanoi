@@ -10,23 +10,22 @@
   };
 
   View.prototype.clickTower = function () {
-    var that = this;
     this.render();
     this.$el.on('click', '.sq', function(event) {
-      if (that.$startTower === 'undefined') {
-        that.$startTower = $(event.currentTarget);
+      if (this.$startTower === 'undefined') {
+        this.$startTower = $(event.currentTarget);
       } else {
         var $endTower = $(event.currentTarget);
-        var from = parseInt(that.$startTower.attr('id'));
+        var from = parseInt(this.$startTower.attr('id'));
         var to = parseInt($endTower.attr('id'));
-        that.game.move(from, to);
-        that.$startTower = 'undefined';
-        that.render();
+        this.game.move(from, to);
+        this.$startTower = 'undefined';
+        this.render();
       }
-      if (that.game.isWon()) {
-        that.$el.after($('<div class="game-over">you won!</div>'));
+      if (this.game.isWon()) {
+        this.$el.after($('<div class="game-over">you won!</div>'));
       }
-    });
+    }.bind(this));
   };
 
   View.prototype.render = function () {
