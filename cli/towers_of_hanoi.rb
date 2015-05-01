@@ -79,11 +79,17 @@ class TowersOfHanoi
   end
 
   def display_poles(vchar, hchar, size)
-    " " * (size / 2 - 1) + vchar + hchar * size + vchar + hchar * size + vchar
+    hchar * (size / 2 - 1) +
+    vchar +
+    hchar * size +
+    vchar +
+    hchar * size +
+    vchar +
+    hchar * (size / 2 - 1)
   end
 
 end
 
 
-game = TowersOfHanoi.new(5)
+game = TowersOfHanoi.new(3)
 game.play
